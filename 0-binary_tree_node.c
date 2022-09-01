@@ -14,11 +14,20 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	binary_tree_t *nodo = malloc(sizeof(binary_tree_t));
 
 	/* failure cases */
-	if (!parent || !value || !nodo)
+	if (!value || !nodo)
 		return (NULL);
 
+	/* for root node case */
+	if (!parent)
+	{
+		nodo->parent = NULL;
+	}
+	else
+	{
+		nodo->parent = parent;
+	}
+
 	/* add node */
-	nodo->parent = parent;
 	nodo->n = value;
 	nodo->left = NULL;
 	nodo->right = NULL;
