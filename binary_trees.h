@@ -59,4 +59,8 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 /* print function */
 void binary_tree_print(const binary_tree_t *);
 
+/*  other function  */
+size_t b_t_l(const binary_tree_t *tree);
+size_t preorden(const binary_tree_t *tree, size_t _size);
+
 #endif
