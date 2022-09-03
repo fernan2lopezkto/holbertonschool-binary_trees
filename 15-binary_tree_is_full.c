@@ -27,7 +27,7 @@ int binary_tree_is_full(const binary_tree_t *tree)
 		height--;
 	}
 
-	if (t_n == size || t_n == size - 2)
+	if (t_n == size || t_n - 2 == size)
 		return (1);
 
 	return (0);
