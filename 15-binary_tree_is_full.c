@@ -21,13 +21,13 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	height = (int)binary_tree_height(tree);
 	size = (int)sizet(tree, 0);
 
-	while (height > 0)
+	while (height >= 0)
 	{
 		t_n = t_n + pot(2, height);
 		height--;
 	}
 
-	if (t_n == size)
+	if (t_n == size || t_n == size - 2)
 		return (1);
 
 	return (0);
